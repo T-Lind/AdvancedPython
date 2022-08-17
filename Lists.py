@@ -1,3 +1,5 @@
+# Lists are mutable and repeatable data is allowed
+
 mylist = [1, 9, 3, 0, -4]
 
 # Print the list
