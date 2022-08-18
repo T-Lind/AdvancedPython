@@ -8,6 +8,8 @@ import logging
 # logging.critical("This is a critical message")
 
 # Set the print level to logging.DEBUG - must be at the beginnning of the program
+import traceback
+
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt='%m/%d%Y %H: %M: %S')
 
@@ -42,5 +44,12 @@ logger.addHandler(file_h)
 # GENERATE DATA THAT'S IN THE file.log file!
 logger.warning('This is a warning in line 42! (logged)')
 logger.error('This is an error in line 43! (logged)')
+
+try:
+    a = [1, 2, 3]
+    val = a[4]  # Throws index 'off by one' exception
+except IndexError as e:
+    logging.error(f"The error is {traceback.format_exc()}")
+
 
 
