@@ -1,4 +1,4 @@
-# Strings: IMMUTABLE (unlike java), " and ' have the same effect
+# Strings: IMMUTABLE, " and ' have the same effect
 
 # Create a string and print it
 my_string = "Hello World"
